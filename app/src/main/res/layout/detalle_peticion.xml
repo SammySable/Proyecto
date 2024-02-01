@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="10dp"
+    android:elevation="10dp"
+    app:cardBackgroundColor="#F0F0F0"
+    app:cardCornerRadius="6dp">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="10.2"
+                android:background="@color/VerdeOscuro"
+                android:gravity="left|center_vertical"
+                android:paddingTop="4dp"
+                android:text="    Fecha:"
+                android:textColor="#FFFFFF"
+                android:textSize="9sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="5"
+                android:background="@color/AzulClaro"
+                android:gravity="left|center_vertical"
+                android:paddingTop="4dp"
+                android:text="    Tipo:"
+                android:textColor="#FFFFFF"
+                android:textSize="9sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="10.6"
+                android:background="@color/RojoOscuro"
+                android:gravity="left|center_vertical"
+                android:paddingTop="4dp"
+                android:text="    Estado:"
+                android:textColor="@color/ic_launcher_background"
+                android:textSize="9sp"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="2dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/peti_fecha"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="10.2"
+                android:background="@color/VerdeOscuro"
+                android:gravity="center_horizontal"
+                android:paddingBottom="2dp"
+                android:text="0000-00-00"
+                android:textColor="#FFFFFF"
+                android:textSize="11sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/peti_tipo"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="5"
+                android:background="@color/AzulClaro"
+                android:gravity="center_horizontal"
+                android:paddingBottom="2dp"
+                android:text="CAMBIO DE VACACIONES ( Entre 2 Pilotos )"
+                android:textColor="#FFFFFF"
+                android:textSize="11sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/peti_estado"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="10.6"
+                android:background="@color/RojoOscuro"
+                android:gravity="center_horizontal"
+                android:paddingBottom="4dp"
+                android:text="Pendiente"
+                android:textColor="@color/ic_launcher_background"
+                android:textSize="11sp"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:background="#DCDCDC"
+            android:gravity="center"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="2"
+                android:background="@color/AzulClaro"
+                android:gravity="left|center_vertical"
+                android:paddingTop="4dp"
+                android:text="    Informe:"
+                android:textColor="#FFFFFF"
+                android:textSize="9sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="2dp"
+                android:layout_weight="5.2"
+                android:background="@color/AzulClaro"
+                android:gravity="left|center_vertical"
+                android:paddingTop="4dp"
+                android:text="    Motivo:"
+                android:textColor="#FFFFFF"
+                android:textSize="9sp"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginBottom="2dp"
+            android:background="#DCDCDC"
+            android:gravity="center"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+
+            <TextView
+                android:id="@+id/peti_informe"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="2"
+                android:background="@color/AzulClaro"
+                android:gravity="center_horizontal"
+                android:paddingBottom="4dp"
+                android:text="_ _ _ _ _ _ _ _ _ _"
+                android:textColor="#FFFFFF"
+                android:textSize="11sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/peti_motivo"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="2dp"
+                android:layout_weight="5.2"
+                android:background="@color/AzulClaro"
+                android:gravity="center_horizontal"
+                android:paddingLeft="4dp"
+                android:paddingRight="4dp"
+                android:paddingBottom="2dp"
+                android:text="CUMPLEAÑOS DEL CONDUCTOR"
+                android:textColor="#FFFFFF"
+                android:textSize="11sp"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="10.2"
+            android:background="@color/AzulClaro"
+            android:gravity="left|center_vertical"
+            android:paddingTop="4dp"
+            android:text="    Comentario:"
+            android:textColor="#FFFFFF"
+            android:textSize="9sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/peti_comentario"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="5"
+            android:background="@color/AzulClaro"
+            android:gravity="center_horizontal"
+            android:paddingBottom="2dp"
+            android:text="..."
+            android:textColor="#FFFFFF"
+            android:textSize="11sp"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>

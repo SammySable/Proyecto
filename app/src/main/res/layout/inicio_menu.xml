@@ -1,0 +1,349 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MENU">
+
+    <View
+        android:id="@+id/view5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="#FFFFFF"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:fillViewport="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout3">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cv_alertafalta"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="30dp"
+                android:layout_marginBottom="10dp"
+                android:foreground="?attr/selectableItemBackground"
+                android:padding="10dp"
+                app:cardCornerRadius="20dp"
+                app:cardElevation="10dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <pl.droidsonroids.gif.GifImageView
+                        android:id="@+id/alerta"
+                        android:layout_width="50dp"
+                        android:layout_height="40dp"
+                        android:layout_margin="10dp"
+                        android:src="@drawable/advertencia" />
+
+                    <TextView
+                        android:id="@+id/textofaltas"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center|left"
+                        android:layout_margin="10dp"
+                        android:gravity="center"
+                        android:text="Usted tiene 0 (cero) reportes acumulados."
+                        android:textColor="@color/AzulClaro"
+                        android:textSize="16sp"
+                        android:textStyle="bold|italic"
+                        app:layout_constraintTop_toBottomOf="@+id/gifhorariolaboral" />
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <HorizontalScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1">
+
+                <GridLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="20dp"
+                    android:alignmentMode="alignMargins"
+                    android:columnCount="2"
+                    android:padding="10dp">
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/cv_horariolaboral"
+                        android:layout_width="160dp"
+                        android:layout_height="160dp"
+                        android:layout_gravity="center"
+                        android:layout_margin="10dp"
+                        android:foreground="?attr/selectableItemBackground"
+                        android:padding="10dp"
+                        app:cardCornerRadius="20dp"
+                        app:cardElevation="10dp">
+
+                        <pl.droidsonroids.gif.GifImageView
+                            android:id="@+id/gifhorariolaboral"
+                            android:layout_width="wrap_content"
+                            android:layout_height="140dp"
+                            android:layout_gravity="center|top"
+                            android:src="@drawable/calendario" />
+
+                        <TextView
+                            android:id="@+id/tvdhorariolaboral"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="bottom|center_horizontal"
+                            android:layout_margin="10dp"
+                            android:layout_marginTop="40dp"
+                            android:gravity="center"
+                            android:text="Horario Laboral"
+                            android:textColor="@color/AzulClaro"
+                            android:textSize="14sp"
+                            android:textStyle="bold|italic"
+                            app:layout_constraintTop_toBottomOf="@+id/gifhorariolaboral" />
+
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/cv_reprogramacion"
+                        android:layout_width="160dp"
+                        android:layout_height="160dp"
+                        android:layout_gravity="center"
+                        android:layout_margin="10dp"
+                        android:foreground="?attr/selectableItemBackground"
+                        app:cardCornerRadius="20dp"
+                        app:cardElevation="10dp">
+
+                        <pl.droidsonroids.gif.GifImageView
+                            android:id="@+id/gifreprogramacion"
+                            android:layout_width="wrap_content"
+                            android:layout_height="140dp"
+                            android:layout_gravity="center_horizontal|top"
+                            android:src="@drawable/reprogramacion" />
+
+
+                        <TextView
+                            android:id="@+id/tvreprogramacion"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="bottom|center_horizontal"
+                            android:layout_margin="10dp"
+                            android:layout_marginTop="40dp"
+                            android:gravity="center"
+                            android:text="Solicitud de Peticiones"
+                            android:textColor="@color/AzulClaro"
+                            android:textSize="14sp"
+                            android:textStyle="bold|italic"
+                            app:layout_constraintTop_toBottomOf="@+id/gifreprogramacion" />
+
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/cv_programarvacaciones"
+                        android:layout_width="160dp"
+                        android:layout_height="160dp"
+                        android:layout_gravity="center"
+                        android:layout_margin="10dp"
+                        android:foreground="?attr/selectableItemBackground"
+                        app:cardCornerRadius="20dp"
+                        app:cardElevation="10dp">
+
+                        <pl.droidsonroids.gif.GifImageView
+                            android:id="@+id/gifvacaciones"
+                            android:layout_width="wrap_content"
+                            android:layout_height="140dp"
+                            android:layout_gravity="center|top"
+                            android:src="@drawable/vacaciones" />
+
+                        <TextView
+                            android:id="@+id/tvvacaciones"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="bottom|center_horizontal"
+                            android:layout_margin="10dp"
+                            android:layout_marginTop="40dp"
+                            android:gravity="center"
+                            android:text="Solicitud de Vacaciones"
+                            android:textColor="@color/AzulClaro"
+                            android:textSize="14sp"
+                            android:textStyle="bold|italic"
+                            app:layout_constraintTop_toBottomOf="@+id/gifvacaciones" />
+
+
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/cv_rutas"
+                        android:layout_width="160dp"
+                        android:layout_height="160dp"
+                        android:layout_gravity="center"
+                        android:layout_margin="10dp"
+                        android:foreground="?attr/selectableItemBackground"
+                        app:cardCornerRadius="20dp"
+                        app:cardElevation="10dp">
+
+                        <pl.droidsonroids.gif.GifImageView
+                            android:id="@+id/gifruta"
+                            android:layout_width="wrap_content"
+                            android:layout_height="140dp"
+                            android:layout_gravity="center_horizontal|top"
+                            android:src="@drawable/camino" />
+
+                        <TextView
+                            android:id="@+id/tvruta"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="bottom|center_horizontal"
+                            android:layout_margin="10dp"
+                            android:layout_marginTop="40dp"
+                            android:gravity="center"
+                            android:text="Información Guias y Rutas"
+                            android:textColor="@color/AzulClaro"
+                            android:textSize="14sp"
+                            android:textStyle="bold|italic"
+                            app:layout_constraintTop_toBottomOf="@+id/gifruta" />
+
+
+                    </androidx.cardview.widget.CardView>
+
+                </GridLayout>
+            </HorizontalScrollView>
+
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+    <LinearLayout
+        android:id="@+id/linearLayout3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/AzulClaro"
+        android:orientation="horizontal"
+        android:padding="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="301dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Nombre de Conductor:"
+                android:textColorHint="#FFFFFF"
+                android:textSize="20sp"
+                app:boxBackgroundColor="@color/AzulClaro"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textInputLayout1">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/tiet_conductor"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:enabled="false"
+                    android:text="- - - - - - - - - - - - - - - - - - - -"
+                    android:textColor="#FFFFFF"
+                    android:textStyle="bold" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:hint="Numero de DNI:"
+                    android:textColorHint="#FFFFFF"
+                    android:textSize="20sp"
+                    app:boxBackgroundColor="@color/AzulClaro"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textInputLayout1">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/tiet_numerodni"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:enabled="false"
+                        android:gravity="center"
+                        android:text="0000000000"
+                        android:textColor="#FFFFFF"
+                        android:textStyle="bold" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:hint="Numero de CAC:"
+                    android:textColorHint="#FFFFFF"
+                    android:textSize="20sp"
+                    app:boxBackgroundColor="@color/AzulClaro"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textInputLayout1">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/tiet_numerocac"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:enabled="false"
+                        android:gravity="center"
+                        android:text="00000000"
+                        android:textColor="#FFFFFF"
+                        android:textStyle="bold" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/imageView2"
+            android:layout_width="288dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:layout_weight="20"
+            app:srcCompat="@drawable/ico_usuario"
+            tools:layout_editor_absoluteX="-36dp"
+            tools:layout_editor_absoluteY="113dp" />
+
+    </LinearLayout>
+
+    <pl.droidsonroids.gif.GifImageView
+        android:id="@+id/back"
+        android:layout_width="50dp"
+        android:layout_height="40dp"
+        android:layout_margin="20dp"
+        android:src="@drawable/back"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
